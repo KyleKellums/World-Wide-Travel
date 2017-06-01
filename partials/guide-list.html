@@ -1,0 +1,11 @@
+<div class="wrapper">
+	<div ng-controller="bookCtrl" class="center-align">Specify your results. Look only for cities, regions, countries, or search for a specific city by name.
+
+	<input type="text" class="input-field col s6" ng-model="filter" name="filter" placeholder="search here">
+		<div ng-repeat="book in guide | filter: {title:filter}">
+			<h5>{{book.type}}</h5>
+			<h5>{{book.title}}</h5>
+			<p>{{book.price}}</p><hr>
+		</div>
+	</div>
+</div>
